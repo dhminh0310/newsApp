@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/news_nav_graph"
+    app:startDestination="@id/fragmentFreakingNews">
+
+    <fragment
+        android:id="@+id/fragmentFreakingNews"
+        android:name="com.example.newsapp.ui.fragments.FragmentBreakingNews"
+        android:label="Freaking news" >
+        <action
+            android:id="@+id/action_fragmentFreakingNews_to_fragmentArticle"
+            app:destination="@id/fragmentArticle"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentArticle"
+        android:name="com.example.newsapp.ui.fragments.FragmentArticle"
+        android:label="Article" >
+        <argument
+            android:name="article"
+            app:argType="com.example.newsapp.models.Article" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSearchNews"
+        android:name="com.example.newsapp.ui.fragments.FragmentSearchNews"
+        android:label="Search news" >
+        <action
+            android:id="@+id/action_fragmentSearchNews_to_fragmentArticle"
+            app:destination="@id/fragmentArticle"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSavedNews"
+        android:name="com.example.newsapp.ui.fragments.FragmentSavedNews"
+        android:label="Saved news" >
+        <action
+            android:id="@+id/action_fragmentSavedNews_to_fragmentArticle"
+            app:destination="@id/fragmentArticle"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+</navigation>
